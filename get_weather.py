@@ -22,3 +22,13 @@ def get_weather():
     
     # Return the current temperature and weather condition.
     return [temperature, weather_str]
+
+def get_alerts():
+
+    # Get current alert message.
+    alert_page = requests.get('https://weather.gc.ca/warnings/report_e.html?ab33')
+    alert_tree = html.fromstring(alert_page.content)
+    alert = alert_tree.xpath('//p/text()')[2]
+
+    # Return the current alert message.
+    print(alert)

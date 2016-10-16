@@ -1,7 +1,8 @@
-# bot
+# wedther
 # Generates tweets for the current weather in Edmonton, AB.
 # Tweets the current temperature and an emoji that represents the
 # current weather conditions.
+# If there is a current weather alert, it also tweets that.
 
 import tweepy
 from secret import *
