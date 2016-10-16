@@ -2,6 +2,7 @@
 # Checks for weather alerts and tweets them.
 
 from get_weather import get_alerts
+from secret_wedther import *
 
 def main():
 

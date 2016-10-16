@@ -5,7 +5,7 @@
 # If there is a current weather alert, it also tweets that.
 
 import tweepy
-from secret import *
+from secret_wedther import *
 from get_weather import get_weather
 
 def main():
