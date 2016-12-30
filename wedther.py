@@ -41,31 +41,23 @@ def main():
     # Make the tweet!
     tweet = 'The weather right now is ' + temperature + ' and ' + weather_picture
 
-    # Store the tweet in a file.
+    # Get the last tweet from a file.
     tweet_file = open('last_tweet.txt', 'r+')
     last_tweet = tweet_file.readline().strip()
 
-    num_duplicates = 1
-
+    # Reword the new tweet if it is a duplicate of the last tweet.
     if last_tweet == tweet:
-        duplicates = tweet_file.readline().strip()
-        num_duplicates = len(duplicates)
-        num_duplicates += 1
-
-    if num_duplicates > 1 and num_duplicates % 2 == 0:
         tweet = 'The weather remains ' + temperature + ' and ' + weather_picture
-    elif num_duplicates > 1 and num_duplicates % 2 != 0:
-        tweet = 'The weather is still ' + temperature + ' and ' + weather_picture
 
     tweet_file.close()
-    tweet_file = open('last_tweet.txt', 'w')
-    tweet_file.write(tweet + '\n')
-    tweet_file.write('x' * num_duplicates)
 
+    # Write the new tweet to the last tweet file.
+    tweet_file = open('last_tweet.txt', 'w')
+    tweet_file.write(tweet)
     tweet_file.close()
     
     # Tweet the tweet!
-    api.update_status(tweet)
+    #api.update_status(tweet)
     
 
 main()
