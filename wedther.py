@@ -58,6 +58,6 @@ def main():
     tweet_file.close()
     
     # Tweet the tweet!
-    #api.update_status(tweet)
+    api.update_status(tweet)
     
 main()
