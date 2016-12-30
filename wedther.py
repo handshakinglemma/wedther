@@ -51,7 +51,7 @@ def main():
 
     tweet_file.close()
 
-    # Write the new tweet to the last tweet file.
+    # Write the new tweet to the file.
     tweet_file = open('last_tweet.txt', 'w')
     tweet_file.write(tweet)
     tweet_file.close()
@@ -59,5 +59,4 @@ def main():
     # Tweet the tweet!
     #api.update_status(tweet)
     
-
 main()
