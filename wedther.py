@@ -42,7 +42,8 @@ def main():
     tweet = 'The weather right now is ' + temperature + ' and ' + weather_picture
 
     # Get the last tweet from a file.
-    tweet_file = open('last_tweet.txt', 'r+')
+    filename = 'last_tweet.txt'
+    tweet_file = open(filename, 'r+')
     last_tweet = tweet_file.readline().strip()
 
     # Reword the new tweet if it is a duplicate of the last tweet.
@@ -52,7 +53,7 @@ def main():
     tweet_file.close()
 
     # Write the new tweet to the file.
-    tweet_file = open('last_tweet.txt', 'w')
+    tweet_file = open(filename, 'w')
     tweet_file.write(tweet)
     tweet_file.close()
     
