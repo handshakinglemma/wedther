@@ -11,21 +11,22 @@ from get_weather import get_weather
 def main():
 
     # Weather dictionary that assigns an emoji to each condition.
-    weather_dict = {'Chance of showers':'chance of \u2614',
-                    'Partly cloudy':'\u26C5',
-                    'A mix of sun and clouds':'a mix of \u2600 and \u2601',
-                    'Sunny':'\u2600',
-                    'Rain':'\u2614',
-                    'Snow':'\u2603',
-                    'Thunderstorm':'\u26C8',
+    weather_dict = {'A few clouds':'a few \u26C5',
                     'A mix of sun and cloud':'\u26C5',
-                    'Mainly sunny':'mainly \u2600',
+                    'A mix of sun and clouds':'a mix of \u2600 and \u2601',
+                    'Chance of flurries':'chance of \u2603',
+                    'Chance of showers':'chance of \u2614',
+                    'Clear':'clear',
                     'Cloudy':'\u2601',
                     'Mainly cloudy':'mainly \u2601',
-                    'Periods of snow':'periods of \u2603',
+                    'Mainly sunny':'mainly \u2600',
                     'Overcast':'\u26C5',
-                    'Clear':'clear',
-                    'A few clouds':'a few \u26C5'}
+                    'Partly cloudy':'partly \u2601',
+                    'Periods of snow':'periods of \u2603',
+                    'Rain':'\u2614',
+                    'Snow':'\u2603',
+                    'Sunny':'\u2600',
+                    'Thunderstorm':'\u26C8'}
 
     # Twitter stuff.
     auth = tweepy.OAuthHandler(C_KEY, C_SECRET)
