@@ -11,10 +11,9 @@ from get_weather import get_weather
 def main():
 
     # Weather dictionary that assigns an emoji to each condition.
-    weather_dict = {'A few clouds':'a few \u26C5',
-                    'A mix of sun and cloud':'\u26C5',
-                    'A mix of sun and clouds':'a mix of \u2600 and \u2601',
-                    'Chance of flurries':'chance of \u2603',
+    weather_dict = {'A few clouds':'a few \u2601',
+                    'A mix of sun and cloud':'a mix of \u2600 and \u2601',
+                    'Chance of flurries':'chance of \'u2744',
                     'Chance of showers':'chance of \u2614',
                     'Clear':'clear',
                     'Cloudy':'\u2601',
@@ -22,7 +21,7 @@ def main():
                     'Mainly sunny':'mainly \u2600',
                     'Overcast':'\u26C5',
                     'Partly cloudy':'partly \u2601',
-                    'Periods of snow':'periods of \u2603',
+                    'Periods of snow':'periods of \u2744',
                     'Rain':'\u2614',
                     'Snow':'\u2603',
                     'Sunny':'\u2600',
@@ -50,6 +49,8 @@ def main():
     # Reword the new tweet if it is a duplicate of the last tweet.
     if last_tweet == tweet:
         tweet = 'The weather remains ' + temperature + ' and ' + weather_picture
+    elif 'The weather remains' in last_tweet:
+        tweet = 'The weather is still ' + temperature + ' and ' + weather_picture
 
     tweet_file.close()
 
