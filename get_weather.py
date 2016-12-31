@@ -31,4 +31,4 @@ def get_alerts():
     alert = alert_tree.xpath('//p/text()')[2]
 
     # Return the current alert message.
-    print(alert)
+    return alert
