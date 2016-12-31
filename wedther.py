@@ -51,6 +51,8 @@ def main():
         tweet = 'The weather remains ' + temperature + ' and ' + weather_picture
     elif 'The weather remains' in last_tweet:
         tweet = 'The weather is still ' + temperature + ' and ' + weather_picture
+    elif 'The weather is still' in last_tweet:
+        tweet = 'The weather continues to be ' + temperature + ' and ' + weather_picture
 
     tweet_file.close()
 
