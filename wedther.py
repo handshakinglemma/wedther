@@ -51,10 +51,10 @@ def main():
     if last_tweet == tweet:
         tweet = 'The weather remains ' + temperature + ' and ' + weather_picture
     elif 'The weather remains' in last_tweet:
-        if last_tweet[20:22] == tweet[20:22] or last_tweet[20] == tweet[20]:
+        if last_tweet[20:23] == tweet[20:23]:
             tweet = 'The weather is still ' + temperature + ' and ' + weather_picture
     elif 'The weather is still' in last_tweet:
-        if last_tweet[21:23] == tweet[21:23] or last_tweet[21] == tweet[21]:
+        if last_tweet[21:24] == tweet[21:24]:
             tweet = 'The weather continues to be ' + temperature + ' and ' + weather_picture
 
     tweet_file.close()
