@@ -13,7 +13,7 @@ def main():
     # Weather dictionary that assigns an emoji to each condition.
     weather_dict = {'A few clouds':'a few \u2601',
                     'A mix of sun and cloud':'a mix of \u2600 and \u2601',
-                    'Chance of flurries':'chance of \'u2744',
+                    'Chance of flurries':'chance of \u2744',
                     'Chance of showers':'chance of \u2614',
                     'Clear':'clear',
                     'Cloudy':'\u2601',
@@ -50,9 +50,11 @@ def main():
     if last_tweet == tweet:
         tweet = 'The weather remains ' + temperature + ' and ' + weather_picture
     elif 'The weather remains' in last_tweet:
-        tweet = 'The weather is still ' + temperature + ' and ' + weather_picture
+        if last_tweet[20] == tweet[20] or last_tweet[20:22] == tweet[20:22]:
+            tweet = 'The weather is still ' + temperature + ' and ' + weather_picture
     elif 'The weather is still' in last_tweet:
-        tweet = 'The weather continues to be ' + temperature + ' and ' + weather_picture
+        if last_tweet[21] == tweet[21] or last_tweet[21:23] == tweet[21:23]:
+            tweet = 'The weather continues to be ' + temperature + ' and ' + weather_picture
 
     tweet_file.close()
 
