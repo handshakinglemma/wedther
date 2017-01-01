@@ -21,6 +21,7 @@ def main():
                     'Mainly sunny':'mainly \u2600',
                     'Overcast':'\u26C5',
                     'Partly cloudy':'partly \u2601',
+                    'Periods of light snow,':'periods of light \u2744',
                     'Periods of snow':'periods of \u2744',
                     'Rain':'\u2614',
                     'Snow':'\u2603',
